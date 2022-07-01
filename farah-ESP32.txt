@@ -38,3 +38,18 @@ void loop(){
 //The delay takes one parameter - the number of milliseconds (one thousand of a second).
 
 //From tools, then a port, then we choose the port to make sure that the code has moved to the electronic chip.
+
+/*ESP32 Chip Features:
+The ESP32 development board is characterized by its very powerful features compared to its price and other development boards of the same category, as it is characterized by:
+Dual core processor and 32-bit architecture
+Processor frequency up to 240MHz
+Wi-Fi with a data transfer speed of up to 150 Mbit/s
+Bluetooth 4.2
+4MB flash memory
+512 KB of random memory (RAM)
+The number of general purpose terminals for inputs and outputs (GPIO), or in simpler terms, the number of terminals that we can use with external elements such as sensors and light-emitting diodes (LEDs) is 34, noting that there are some special boards from ESP32 where the number of GPIO is 30
+Built-in Hall effect sensor (this type of sensor is used to detect the presence of magnetic fields)
+Ten built-in touch sensors
+Built-in temperature sensor (looks like newer versions of this board no longer come with a temperature sensor, frankly I'm not entirely sure of this information, if anyone can confirm or deny this information let them do so in the comments section below)
+12-bit analog-to-digital converter (ADC)
+8-bit digital to analog converter (DAC)*/
