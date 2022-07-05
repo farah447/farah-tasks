@@ -1,0 +1,81 @@
+// convert audio to txt in Arabic:
+<html dir = rtl>
+  <head>
+    <title>Live update</title>
+    <style media="screen">
+    body{
+    background-image: url("https://i.pinimg.com/564x/0b/88/18/0b8818b689a5a067aab6f39b3a6cf1fe.jpg");
+    background-color: #F4F4F4;
+    background-repeat: no-repeat;
+    padding: 30px 50px; 
+    margin: 40px 20px;
+    background-position: bottom  left; 
+    background-size: 480px 400px; 
+    }
+    div.header{
+        text-align: center;
+        padding: 3px 5px;
+        font-size: 15px;
+        font-style: italic;
+        font-family: Arial;
+    }
+    p{
+      text-align: center;
+      padding: 15px 32px;
+      font-size: 13px;
+    }
+    button{
+      background-color: #C3AD61; 
+      border: none;
+  	color: white;
+  	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	margin: 4px 2px;
+      border-radius: 8px;
+  	cursor: pointer;
+    }
+    </style>    
+  </head>
+  <body>
+  <div class="Header">
+    <h2> تحويل الكلام الى نص:  </h2>
+    <p><button type="button" onclick="SpeechRecog()">ابدأ</button> &nbsp; <span id=”action”></span></p><span id="action"></span></p>
+    <input type="text" id="output">
+  </div>
+  <script>
+   function SpeechRecog() {
+            var output = document.getElementById("output");
+            var action = document.getElementById("action");
+                var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+                var recognition = new SpeechRecognition();
+                   recognition.lang = 'ar';
+
+                // This runs when the speech recognition service starts
+                recognition.onstart = function() {
+                    action.innerHTML = "<small>تحدث من فضلك ...</small>";
+                };
+                
+                recognition.onspeechend = function() {
+                    action.innerHTML = "<small>توقف عن الاستماع ، أتمنى أن تكون قد انتهيت ...</small>";
+                    recognition.stop();
+                }
+              
+                // This runs when the speech recognition service returns result
+                recognition.onresult = function(event) {
+                    var transcript = event.results[0][0].transcript;
+                    var confidence = event.results[0][0].confidence;
+                    output.value=transcript;
+                };
+              
+                 // start recognition
+                 recognition.start();
+          }
+  </script>
+  </body>
+</html>
+
+//this image is for the web page: 
+//https://drive.google.com/file/d/1zqn2PfohCjBXkkQjcRvAp8rnfnKOrTPy/view?usp=sharing
