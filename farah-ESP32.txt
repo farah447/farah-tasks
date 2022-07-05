@@ -39,6 +39,12 @@ void loop(){
 
 //From tools, then a port, then we choose the port to make sure that the code has moved to the electronic chip.
 
+// control ESP32 from website:
+The first thing is to write the HTML code for the page you want to control the piece through.
+Second, open the Arduino IDE and use the command (client.println("")) to add the html code line by line.
+finally, press the run button on the Arduino IDE, and the codes will be transferred to the selected device.
+
+
 /*ESP32 Chip Features:
 The ESP32 development board is characterized by its very powerful features compared to its price and other development boards of the same category, as it is characterized by:
 Dual core processor and 32-bit architecture
@@ -53,3 +59,4 @@ Ten built-in touch sensors
 Built-in temperature sensor (looks like newer versions of this board no longer come with a temperature sensor, frankly I'm not entirely sure of this information, if anyone can confirm or deny this information let them do so in the comments section below)
 12-bit analog-to-digital converter (ADC)
 8-bit digital to analog converter (DAC)*/
+
