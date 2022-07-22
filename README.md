@@ -113,4 +113,8 @@ With the following, you can initialize rosdep.
      sudo rosdep init
      rosdep update
 
-#done.
+# Resources:
+
+http://wiki.ros.org/Installation/Ubuntu
+
+https://brb.nci.nih.gov/seqtools/installUbuntu.html
