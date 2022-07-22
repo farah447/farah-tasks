@@ -87,7 +87,7 @@ https://drive.google.com/file/d/1zqn2PfohCjBXkkQjcRvAp8rnfnKOrTPy/view?usp=shari
 
 # Task 1.2:
 
-2: write wasdom ESP32 operating algorithm:
+# Write wasdom ESP32 operating algorithm:
 
 First, make sure the piece is working by link and the led on the piece is on and off.
 
